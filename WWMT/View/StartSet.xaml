@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="ModelTool.View.StartSet"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:ModelTool.ViewModel"
+             xmlns:local="clr-namespace:ModelTool.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1071">
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="10,10,10,10">
+                <TextBlock Text="启动设置" FontSize="25" FontWeight="Bold" Margin="20,0,0,20" Style="{StaticResource TextBlock}"/>
+                <StackPanel Height="40" Orientation="Horizontal" Margin="20,0,0,30">
+                    <TextBlock Text="启动选项：" Width="120" VerticalAlignment="Center" Style="{StaticResource TextBlock}"/>
+                    <ComboBox Style="{StaticResource CustomComboBoxStyle}" Margin="0,0,60,0"
+                              ItemsSource="{Binding ComboBoxItems}"
+                              SelectedItem="{Binding SelectedComboBoxItem}">
+                    </ComboBox>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
